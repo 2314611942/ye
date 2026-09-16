@@ -51,7 +51,7 @@
 - 1921 年军官照为文献中的低清扫描；人物依文件页从左向右列出。
 - “叶挺人物照片”不晚于 1941 年，不能据其名称误标成少年、军校或留苏照片。
 - 1940 年干部合影年份采用文件元数据。1939 年的家庭、军部合影不作为 1927 年起义、1928 年旅欧或 1938 年岩寺现场照片。
-- 页面仅显示国防科技大学署名，不显示素材作者或授权文字；本目录留存素材出处。延安素材元数据见 [yanan-metadata.json](yanan-metadata.json)。既有 Commons API 元数据存放在 [archive-metadata.json](archive-metadata.json)；既有肖像使用对应的 Ye Ting.jpg 文件页。
+- 页面使用国防科技大学校徽替代文字署名，不显示素材作者或授权文字；本目录留存素材出处。延安素材元数据见 [yanan-metadata.json](yanan-metadata.json)。既有 Commons API 元数据存放在 [archive-metadata.json](archive-metadata.json)；既有肖像使用对应的 Ye Ting.jpg 文件页。
 
 ## 艺术示意
 
@@ -68,6 +68,13 @@
 ## 装饰
 
 红绸、五角星、宝塔山与窑洞意象为项目原创 SVG 装饰，见 src/RedHeritage.jsx，不作为历史照片或建筑测绘图。
+
+## 校徽
+
+- 展示文件：[国防科技大学校徽](../public/images/identity/nudt-emblem.png)，本地保存，使用原色与等比例显示。用于密码页、封面页脚、展厅页头和资料面板，替代原有文字署名。
+- 设计参照：[学校官方视觉形象识别系统](https://www.nudt.edu.cn/xxgk/sjxxsbxt/bzxhgf/index.htm)。
+- 文件来源：[公开学术主页](https://xiefeng69.github.io/)，[校徽图片原址](https://xiefeng69.github.io/static/56c5cecfea951ef889c308d2ba20a483/dd973/nudt.png)。官网原始下载在当前网络环境无法连接，使用公开副本并核对标志内容；没有重绘校徽或将其宣称为项目原创。
+- 校徽为学校标识，其相关权利归权利人所有；不纳入18张展览影像数量。
 
 ## 配乐
 

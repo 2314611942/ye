@@ -1,0 +1,47 @@
+.access-gate{
+  position:relative;isolation:isolate;min-height:100dvh;box-sizing:border-box;
+  display:flex;flex-direction:column;overflow:hidden;padding:0 clamp(20px,5.6vw,100px);
+  background:radial-gradient(ellipse at 73% 28%,#a32b3540,transparent 55%),linear-gradient(125deg,#260e16,#571521 70%,#781e28);
+  color:#f3e1bf;
+}
+.access-ribbons{position:absolute;inset:0;width:100%;height:100%;opacity:.18;z-index:-1;pointer-events:none}
+.access-skyline{position:absolute;right:4%;bottom:62px;width:min(580px,90%);height:auto;color:#d8ab6b;opacity:.12;z-index:-1;pointer-events:none}
+.access-header,.access-footer{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-shrink:0}
+.access-header{min-height:76px;border-bottom:1px solid #dfb77730;font-family:var(--serif);font-size:13px;letter-spacing:2px;color:#d6b78a}
+.access-header>span:first-child{display:flex;align-items:center;gap:10px}
+.access-header>span:last-child{font-family:Georgia,serif;font-size:11px;white-space:nowrap}
+.access-stage{flex:1;display:grid;place-items:center;padding:48px 0}
+.access-card{width:100%;max-width:430px;box-sizing:border-box;text-align:center;padding:39px 40px 38px;background:linear-gradient(150deg,#571925ed,#310f19f2);border:1px solid #cda26370;box-shadow:0 22px 65px #14071055;position:relative}
+.access-card:before,.access-card:after{content:"";position:absolute;width:42px;height:42px;pointer-events:none;border-color:#edc98a;border-style:solid}
+.access-card:before{top:-1px;left:-1px;border-width:2px 0 0 2px}
+.access-card:after{right:-1px;bottom:-1px;border-width:0 2px 2px 0}
+.access-emblem{display:grid;place-items:center;margin:0 auto 20px;width:49px;height:49px;color:#edc68b;border:1px solid #d5ab6b70;background:#ba28323d}
+.access-kicker{font-size:10px;letter-spacing:4px;color:#d3ad78;margin-bottom:16px}
+.access-card h1{font-family:var(--serif);font-size:42px;font-weight:700;letter-spacing:7px;line-height:1.38;padding-left:7px;color:#f6e7cd}
+.access-card h1 span{display:block;color:#e2bc79}
+.access-subtitle{font-family:var(--serif);font-size:12px;letter-spacing:3px;color:#d3b591;margin-top:16px}
+.access-form{margin-top:31px;text-align:left}
+.access-form label{display:block;color:#e3c8a0;font-size:12px;letter-spacing:2px;margin-bottom:10px}
+.access-field{display:flex;align-items:center;min-width:0;border:1px solid #ba915c87;background:#210e18b8;color:#c6a271;padding-left:14px}
+.access-field:focus-within{border-color:#f4d296;box-shadow:0 0 0 2px #e4bd7426}
+.access-field.has-error{border-color:#f4a795}
+.access-field input{flex:1;width:0;min-width:0;height:50px;padding:0 11px;border:0;background:transparent;outline:none;color:#fff0d2;font-size:16px;letter-spacing:1px;border-radius:0}
+.access-field input:focus-visible{outline:none}
+.access-field input::placeholder{font-size:12px;letter-spacing:2px;color:#b7a08a}
+.access-field input:autofill{box-shadow:0 0 0 100px #2e1420 inset;-webkit-text-fill-color:#fff0d2}
+.access-visibility{display:grid;place-items:center;width:46px;height:50px;flex-shrink:0;color:#d9b584}
+.access-visibility:focus-visible{outline-offset:-4px}
+.access-error{min-height:26px;margin:0;padding-top:6px;box-sizing:border-box;color:#ffd0be;font-size:11px;line-height:1.6}
+.access-submit{width:100%;min-height:49px;display:flex;align-items:center;justify-content:center;gap:18px;background:linear-gradient(105deg,#e5c68f,#c7a265);border:1px solid #f2d59f;color:#36131b;font-size:13px;letter-spacing:3px}
+.access-submit:hover{background:#eed39d;color:#36131b}
+.access-footer{min-height:72px;border-top:1px solid #dfb77730}
+.access-footer>span{font-size:10px;letter-spacing:2px;color:#c5a67f}
+.access-footer strong{font-family:var(--serif);font-size:16px;font-weight:500;letter-spacing:4px;color:#ead0a8}
+@media(max-width:640px){
+  .access-header{min-height:62px;font-size:10px;letter-spacing:1px;gap:12px}
+  .access-header>span:first-child{gap:7px}.access-header>span:last-child{font-size:9px;letter-spacing:.5px}
+  .access-stage{padding:30px 0}.access-card{padding:32px 26px}.access-card h1{font-size:38px;letter-spacing:5px;padding-left:5px}
+  .access-subtitle{font-size:11px;letter-spacing:2px}.access-footer{min-height:62px;gap:12px}
+  .access-footer>span{font-size:8px;letter-spacing:1px}.access-footer strong{font-size:13px;letter-spacing:2px}
+}
+@media(max-width:360px){.access-card{padding:28px 20px}.access-card h1{font-size:33px}.access-kicker{letter-spacing:2px}.access-header{font-size:9px}.access-header>span:last-child{font-size:8px}.access-stage{padding:24px 0}}

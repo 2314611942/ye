@@ -3,7 +3,7 @@ import { chromium } from '@playwright/test';
 import { writeFileSync } from 'node:fs';
 const browser = await chromium.launch({executablePath:process.env.CHROME_PATH || '/usr/bin/google-chrome',args:['--no-sandbox']});
 const page = await browser.newPage({viewport:{width:1440,height:900}});
-await page.goto(process.env.PERFORMANCE_URL || 'http://localhost:5173'); await page.getByRole('button',{name:'静音进入',exact:true}).click(); await page.locator('.china-land').first().waitFor();
+await page.goto(process.env.PERFORMANCE_URL || 'http://localhost:5173'); await page.getByLabel('访问密码',{exact:true}).fill('yanan'); await page.getByRole('button',{name:'验证并进入',exact:true}).click(); await page.getByRole('button',{name:'静音进入',exact:true}).click(); await page.locator('.china-land').first().waitFor();
 await page.waitForTimeout(1600);
 const cdp = await page.context().newCDPSession(page); await cdp.send('Emulation.setCPUThrottlingRate',{rate:4}); await cdp.send('Performance.enable');
 const before = Object.fromEntries((await cdp.send('Performance.getMetrics')).metrics.map(m=>[m.name,m.value]));

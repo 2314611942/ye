@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { ArrowUpRight, BookOpen, Check, ChevronRight, Flag, Pause, Play, Settings2, Star, Volume2, VolumeX } from 'lucide-react';
 import MapAtlas from './MapAtlas';
 import Entrance from './Entrance';
+import AccessGate from './AccessGate';
+import UniversityEmblem from './UniversityEmblem';
 import ExhibitDialog, { ArchiveImage } from './ExhibitDialog';
 import Particles from './Particles';
 import { RedRibbons, YananSkyline } from './RedHeritage';
@@ -63,7 +65,7 @@ function App() {
   return <div className={`exhibit ${panel ? 'reading' : ''} ${entered ? 'entered' : ''} mode-${mode}`}>
     <a className="skip-link" href="#event-timeline">跳转至事件时间轴</a>
     <div className="exhibit-space" inert={!entered ? true : undefined}>
-      <header className="exhibit-header"><div className="brand"><span className="brand-seal"><Star size={17} fill="currentColor"/><b>铁军</b></span><div><strong>叶挺<span> · 生平足迹</span></strong><small className="university-signature">国防科技大学</small></div></div>
+      <header className="exhibit-header"><div className="brand"><UniversityEmblem/><div><strong>叶挺<span> · 生平足迹</span></strong></div></div>
         <nav className="period-tabs" role="tablist" aria-label="生平时期">{periods.map((p, i) => <button ref={i === 0 ? enterButton : null} key={p.id} id={`tab-${p.id}`} role="tab" title={p.rangeLabel} aria-selected={period.id === p.id} aria-controls="exhibition-map" tabIndex={period.id === p.id ? 0 : -1} onClick={() => switchPeriod(p.id)} onKeyDown={(e) => { let next; if (e.key === 'ArrowRight') next = (i + 1) % 3; if (e.key === 'ArrowLeft') next = (i + 2) % 3; if (e.key === 'Home') next = 0; if (e.key === 'End') next = 2; if (next !== undefined) { e.preventDefault(); switchPeriod(periods[next].id); document.getElementById(`tab-${periods[next].id}`).focus(); } }}><span>{p.number}</span><strong>{p.tab}</strong></button>)}</nav>
         <div className="header-actions"><button onClick={() => openPanel('spirit')} aria-label="精神丰碑" title="精神丰碑"><Flag size={17}/><span>精神丰碑</span></button><button onClick={() => openPanel('sources')} aria-label="史料文献" title="史料文献"><BookOpen size={17}/><span>史料文献</span></button><button className="icon-button" onClick={() => openPanel('settings')} aria-label="声音与展厅设置" title="声音与展厅设置"><Settings2 size={18}/></button></div>
       </header>
@@ -84,4 +86,4 @@ function App() {
     {toast && <div className="toast" role="status"><Check size={16}/>{toast}</div>}
   </div>;
 }
-createRoot(document.getElementById('root')).render(<React.StrictMode><App/></React.StrictMode>);
+createRoot(document.getElementById('root')).render(<React.StrictMode><AccessGate><App/></AccessGate></React.StrictMode>);
