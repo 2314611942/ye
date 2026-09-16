@@ -1,0 +1,25 @@
+{
+  "environment": "Linux Chrome, Vite development server, 1440×900, 4× CPU throttle, normal motion, 119 sampled frame intervals per run; local comparison, not a guarantee for every device.",
+  "before": {
+    "label": "before",
+    "cpuThrottle": 4,
+    "frames": 119,
+    "frameMedianMs": 68.09999999962747,
+    "frameP95Ms": 75.59999999962747,
+    "over33ms": 91,
+    "scriptMs": 6169.044000000001,
+    "taskMs": 7036.924999999999,
+    "layoutMs": 134.53799999999998
+  },
+  "after": {
+    "label": "after",
+    "cpuThrottle": 4,
+    "frames": 119,
+    "frameMedianMs": 16.59999999962747,
+    "frameP95Ms": 18.5,
+    "over33ms": 0,
+    "scriptMs": 110.60300000000001,
+    "taskMs": 714.2850000000001,
+    "layoutMs": 22.474999999999998
+  }
+}

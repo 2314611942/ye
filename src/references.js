@@ -1,0 +1,23 @@
+const ref = (name, title, date, url, author = name, kind = '研究叙述') => ({ name, title, date, url, author, kind });
+export const references = {
+  guangdong: ref('广东英烈网 · 广东党史', '纪念叶挺同志诞辰128周年：他在烈火和热血中永生', '2024-09-10', 'https://service.dva.gd.gov.cn/gdylw/gdyw/202409/b9aabcb52e064261a44d4f716fff27b0.shtml'),
+  liaison: ref('中央政府驻澳门联络办公室', '叶挺：在烈火和热血中永生', '2021-06-16', 'https://www.zlb.gov.cn/2021-06/16/c_1211203544.htm'),
+  macau: ref('澳门基金会 · 澳门记忆', '叶挺，1896—1946', '页面未标明确切发布日期', 'https://www.macaumemory.mo/entries_16bb550ed6d74d6d8d60fb214e2f84f8'),
+  clean: ref('人民网 · 党史频道', '叶挺的清廉人生', '2014-01-07', 'https://dangshi.people.com.cn/n/2014/0107/c85037-24044363.html'),
+  army: ref('中国军网 · 中国国防报', '新四军初建时八个团的特殊代号', '2024-07-23', 'https://www.81.cn/js_208592/16325349.html', '胡遵远'),
+  headquarters: ref('中国军网 · 人民政协报', '新四军军部在武汉成立始末', '2021-12-30', 'https://www.81.cn/js_208592/jdt_208593/10119362.html', '陶爱民'),
+  hubei: ref('湖北党史网', '叶挺将军的革命人生', '2022-04', 'https://www.hbdsw.org.cn/jcfb/fhqy/202204/t4531029.shtml'),
+  memorial: ref('中国军网', '叶挺｜80年前的今天，延安没有等到他的归来', '2026-04-08', 'https://www.81.mil.cn/yw_208727/16453906.html', '中国军网', '纪念叙述 · 含申请电文影像'),
+  poetry: ref('中国共产党新闻网 · 学习时报', '品出叶挺诗歌中的赤胆忠心', '2022-11-04', 'https://cpc.people.com.cn/n1/2022/1104/c443712-32558750.html', '颜廷平', '研究叙述 · 转引原始诗作'),
+  application: ref('人民网 · 北京日报', '叶挺的第二次入党', '2019-06-17', 'https://dangshi.people.com.cn/n1/2019/0617/c85037-31154970.html', '冯建玫', '研究叙述 · 转引申请电与复电'),
+  uprising: ref('人民网 · 学习时报', '军旗从这里升起——八一南昌起义纪念塔碑文敬读', '2021-09-17', 'https://dangshi.people.com.cn/n1/2021/0917/c436975-32229652.html', '张鑫华', '碑文解读'),
+  iron: ref('国防部网 · 解放军报', '清风正气歌丨何谓“铁军”', '2026-05-30', 'https://www.mod.gov.cn/gfbw/gfjy_index/16464455.html', '孙阳'),
+  formation: ref('中国军网', '史海钩沉：新四军如何汇成“一道抗日铁流”', '2018-11-30', 'https://www.81.mil.cn/2018zt/2018-11/30/content_9361596.htm'),
+  regiment: ref('中国共产党新闻网', '时代先锋：“叶挺独立团”纪事（上）', '2016-11-13', 'https://cpc.people.com.cn/n1/2016/1113/c64104-28856069.html'),
+  'study-abroad': ref('人民网 · 党史学习教育', '“百年留苏”，不变的爱国情报国志', '2021-07-13', 'https://dangshi.people.com.cn/n1/2021/0713/c436975-32155881.html'),
+  youth: ref('羊城晚报', '北伐“铁军”名将叶挺，成名之战就在故乡惠州', '2019-12-27', 'https://news.ycwb.com/2019-12/27/content_30422554.htm', '林海生、夏杨'),
+  baoding: ref('农工党湖北省委会', '浩然英魂邓演达', '2015-04-30', 'https://www.hbng.gov.cn/index.php?id=1582'),
+  'early-service': ref('惠州新闻网', '叶挺：第一位工农红军总司令', '2006-09-06', 'https://www.hznews.com/xw/tbbd/200609060083.html'),
+  biography2017: ref('人民网 · 党史频道', '叶挺：在烈火和热血中永生', '2017-11-20', 'https://dangshi.people.com.cn/n1/2017/1120/c85037-29656518.html'),
+  macauMuseum: ref('澳门博物馆 · 澳门文化局', '叶挺将军故居', '常设参观资料，未标发布日期', 'https://www.macaumuseum.gov.mo/zh-hans/visit/ye-ting', '澳门文化局', '纪念机构资料'),
+};

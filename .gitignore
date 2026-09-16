@@ -1,0 +1,13 @@
+node_modules/
+dist/
+release/
+test-results/
+playwright-report/
+.DS_Store
+.agents/
+.codex/
+.env
+.env.*
+!.env.example
+*.log
+yeting-life-atlas/

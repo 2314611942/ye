@@ -1,0 +1,19 @@
+{
+  "label": "arrows",
+  "cpuThrottle": 4,
+  "frames": 119,
+  "frameMedianMs": 16.600000000093132,
+  "frameP95Ms": 17.5,
+  "over33ms": 0,
+  "scriptMs": 64.461,
+  "taskMs": 572.2940000000001,
+  "layoutMs": 10.031,
+  "date": "2026-09-16",
+  "environment": "Linux / Google Chrome / Vite production preview",
+  "url": "http://localhost:4173",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "note": "Single local measurement; production build, not a direct comparison with the earlier development-server benchmark."
+}

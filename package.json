@@ -1,0 +1,26 @@
+{
+  "name": "yeting-life-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "package:site": "npm run build && python3 scripts/package-site.py",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "python3 scripts/import-copy.py --check && node --test tests/*.test.js",
+    "copy:sync": "python3 scripts/import-copy.py",
+    "test:ui": "playwright test"
+  },
+  "dependencies": {
+    "d3-geo": "^3.1.1",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.1.0"
+  }
+}
