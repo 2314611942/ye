@@ -1,0 +1,30 @@
+{
+  "id": "epic-landscape",
+  "date": "2026-09-17",
+  "tool": "built-in image_gen",
+  "type": "AI 艺术装饰背景",
+  "purpose": "封面山河、红绸、晨光氛围，非历史照片、具体事件现场或延安地理复原；历史原照单独以 CSS 叠加，未作 AI 编辑。",
+  "prompt": "Use case: stylized-concept. Asset type: full-bleed cinematic background artwork for a dignified Chinese historical museum web entrance about General Ye Ting. Create one wide 16:9 landscape composition, ideally 2560x1440 or larger, painterly cinematic matte painting, premium monumental film-poster atmosphere. No people or portraits: archival photographs will be layered over this artwork in the website. Rolling Chinese mountains stretch across the lower third with long layered mist and deep perspective; a restrained warm golden dawn breaks along the distant horizon at center right. Rich vermilion and crimson silk flows in a single sweeping arc across the upper right and toward the lower right edge, with natural cloth folds, large elegant forms, not a cartoon ribbon or flag. The left 45 percent and upper central area must be quiet deep burgundy with subtle tonal depth, intentionally generous negative space for large Chinese title and poem. Right middle area is dark warm red atmospheric negative space for an archival portrait layer, avoid bright highlights behind a face. Lower horizon evokes the Loess Plateau around Yan'an but has no identifiable architecture or precise historical scene. Palette deep oxblood, crimson, dark warm red, muted antique gold; luminous warm dawn but restrained, no purple, no blue. Strong majestic scale, solemn and poetic, not battle spectacle. Fine natural matte texture without repeated dot patterns, small decorative ornaments or harsh lines. No text, calligraphy, lettering, dates, borders, watermarks, emblems, flags with symbols, buildings, soldiers, faces, weapons or flames. A seamless image rather than a UI mockup.",
+  "originalSize": [
+    1672,
+    941
+  ],
+  "processing": "Desktop: WebP quality 86; mobile: proportional Lanczos resize to 1000px wide, WebP quality 82. No repainting or cropping.",
+  "files": [
+    {
+      "path": "public/images/cover/epic-landscape.webp",
+      "bytes": 117386,
+      "sha256": "1752ffe456cced039b07b534c9fae2f1062bdbe0159e5a7863943a02a300be74"
+    },
+    {
+      "path": "public/images/cover/epic-landscape-mobile.webp",
+      "bytes": 44254,
+      "sha256": "711fb6ad284019e15148e9b530de1dc95ba7995463e19ff776d4b5ec71ca140d"
+    },
+    {
+      "path": "docs/generated-originals/epic-landscape.png",
+      "bytes": 1954907,
+      "sha256": "1d0acb2ca13ca561628611021796ed5c35c92a9f9b82fa260342049cb09b7999"
+    }
+  ]
+}

@@ -10,6 +10,10 @@
     "preview": "vite preview --host 0.0.0.0",
     "test": "python3 scripts/import-copy.py --check && node --test tests/*.test.js",
     "copy:sync": "python3 scripts/import-copy.py",
+    "music": "python3 scripts/music_pipeline.py",
+    "music:prepare": "python3 scripts/music_pipeline.py prepare",
+    "music:doctor": "python3 scripts/music_pipeline.py doctor",
+    "test:music": "python3 -m unittest discover -s tests -p 'test_music_*.py' -v",
     "test:ui": "playwright test"
   },
   "dependencies": {

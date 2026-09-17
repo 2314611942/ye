@@ -1,0 +1,63 @@
+.ending-entry {
+  position: absolute;
+  right: 84px;
+  bottom: 24px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 68px;
+  padding: 12px 17px;
+  border: 1px solid #f5d394;
+  border-radius: 12px 12px 3px 12px;
+  background: linear-gradient(120deg, #ed3939, #a60f26);
+  color: #fff1cf;
+  box-shadow: 0 8px 28px #43051266, inset 0 1px #ffe8bc55;
+  text-align: left;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.ending-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px #43051280, 0 0 20px #f3bd6130;
+}
+.ending-entry:focus-visible { outline: 2px solid #fff1cf; outline-offset: 5px; }
+.ending-entry-play {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fff0c8, #dfb66d);
+  color: #a71426;
+  box-shadow: 0 2px 9px #670c2233;
+}
+.ending-entry-play svg { margin-left: 2px; }
+.ending-entry-copy { display: grid; gap: 5px; }
+.ending-entry-copy small { font-size: 9px; letter-spacing: .24em; color: #f9dba5; }
+.ending-entry-copy strong { font-family: var(--serif); font-size: 18px; line-height: 1.25; letter-spacing: .12em; white-space: nowrap; }
+.ending-entry-arrow { margin-left: 3px; color: #f1cc8e; }
+@media (max-width: 640px) {
+  .ending-entry { right: 14px; bottom: 14px; min-height: 56px; padding: 10px 12px; gap: 9px; border-radius: 10px 10px 3px 10px; }
+  .ending-entry-play { flex-basis: 29px; width: 29px; height: 29px; }
+  .ending-entry-play svg { width: 14px; height: 14px; }
+  .ending-entry-copy { gap: 4px; }
+  .ending-entry-copy small { font-size: 8px; letter-spacing: .16em; }
+  .ending-entry-copy strong { font-size: 14px; letter-spacing: .08em; }
+  .ending-entry-arrow { display: none; }
+  .map-controls { bottom: 84px; }
+  .overseas-journeys { bottom: 86px; }
+  .mode-eurasia .tour-caption { bottom: 274px; }
+}
+@media (max-height: 600px) and (min-width: 641px) {
+  .ending-entry { bottom: 16px; min-height: 54px; padding: 8px 13px; }
+  .ending-entry-copy strong { font-size: 16px; }
+  .mode-eurasia .ending-entry { left: 24px; right: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ending-entry { transition: none; }
+  .ending-entry:hover { transform: none; }
+}
+[data-motion="reduced"] .ending-entry { transition: none; }
+[data-motion="reduced"] .ending-entry:hover { transform: none; }

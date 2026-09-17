@@ -15,7 +15,7 @@ const close = async (page) => { await page.getByRole('button', { name: '关闭�
 test.beforeEach(async ({ page }) => { await page.emulateMedia({ reducedMotion: 'reduce' }); });
 test('静音入场、会话记忆与首次分享直达', async ({ page }) => {
   let audioRequests = 0; page.on('request', r => { if (r.url().includes('reverie.mp3')) audioRequests++; });
-  await enter(page); expect(audioRequests).toBe(0); await expect(page.locator('.brand .university-emblem')).toHaveAttribute('alt','国防科技大学校徽');
+  await enter(page); expect(audioRequests).toBe(0); await expect(page.locator('.brand .red-star')).toHaveAttribute('alt','红色五角星');
   await page.reload(); await expect(page.locator('.entrance')).toHaveCount(0);
   await visit(page, '/?event=rejoin'); await expect(page.getByRole('dialog')).toBeVisible();
   await expect(page.locator('#dialog-title')).toHaveText('重获自由，再次申请入党');
@@ -103,7 +103,7 @@ test('地图和图片加载失败可继续阅读，地图支持重试', async ({
 test('减少动效设置、时期键盘切换、资料和精神面板', async ({ page }) => {
   await enter(page); await page.getByRole('tab').first().focus(); await page.keyboard.press('ArrowRight'); await expect(page.getByRole('tab').nth(1)).toHaveAttribute('aria-selected','true');
   await page.getByRole('button',{name:'声音与展厅设置',exact:true}).click(); await expect(page.getByRole('button',{name:/减少动效/})).toHaveAttribute('aria-pressed','true'); await expect(page.locator('html')).toHaveAttribute('data-motion','reduced'); await close(page);
-  await page.getByRole('button',{name:'史料文献',exact:true}).click(); await expect(page.locator('.media-catalog figure')).toHaveCount(Object.keys(media).length); await expect(page.locator('.panel-content')).not.toContainText(/CC BY|Wikimedia|Scott Buckley|DataV/); await expect(page.locator('.panel-content .university-emblem')).toBeVisible(); await close(page);
+  await page.getByRole('button',{name:'史料文献',exact:true}).click(); await expect(page.locator('.media-catalog figure')).toHaveCount(Object.keys(media).length); await expect(page.locator('.panel-content')).not.toContainText(/CC BY|Wikimedia|Scott Buckley|DataV/); await expect(page.locator('.panel-content .red-star')).toBeVisible(); await close(page);
   await page.getByRole('button',{name:'精神丰碑',exact:true}).click(); await page.getByRole('button',{name:'走近《囚歌》背后的故事'}).click(); await expect(page.locator('#dialog-title')).toContainText('《囚歌》');
 });
 // Record the real HTMLAudioElement to check actual playback, muting and browser visibility handling.
@@ -207,8 +207,8 @@ for (const viewport of [{width:1440,height:900},{width:1024,height:768},{width:7
     const cover=page.locator('.epic-entrance'); await expect(cover).toBeVisible();
     await expect(page.locator('.cover-poem')).toContainText('我应该在烈火和热血中得到永生！');
     await expect(page.locator('.cover-poem cite')).toContainText('叶挺《囚歌》节选');
-    await expect(page.locator('.cover-footer .university-emblem')).toBeVisible();
-    await page.locator('.cover-portrait img').evaluate(img=>img.decode());
+    await expect(page.locator('.cover-footer .red-star')).toBeVisible();
+    await page.locator('.cover-frame.is-current img').evaluate(img=>img.decode());
     expect(await cover.evaluate(el=>el.scrollWidth<=el.clientWidth)).toBe(true);
     for (const name of ['开启声音并进入','静音进入']) {
       const button=page.getByRole('button',{name,exact:true}); await expect(button).toBeInViewport();

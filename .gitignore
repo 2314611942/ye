@@ -11,3 +11,6 @@ playwright-report/
 !.env.example
 *.log
 yeting-life-atlas/
+.music-tools/
+music/output/
+__pycache__/

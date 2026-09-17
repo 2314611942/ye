@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 export const MUSIC_CREDIT = "'Reverie' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au";
-export function useSound(reading) {
+export function useSound(reading, suspended = false) {
   const audio = useRef(null), context = useRef(null), intent = useRef(false);
+  const suspendedRef = useRef(suspended);
+  suspendedRef.current = suspended;
   const [playing, setPlaying] = useState(false), [muted, setMuted] = useState(true);
   const [volume, setVolume] = useState(.2), [effects, setEffects] = useState(true), [error, setError] = useState(false);
   const safePlay = () => {
-    if (!audio.current || document.hidden) return;
+    if (!audio.current || document.hidden || suspendedRef.current) return;
     setError(false);
     audio.current.play().catch((e) => { if (e.name !== 'AbortError') { setError(true); setPlaying(false); intent.current = false; } });
   };
@@ -15,16 +17,20 @@ export function useSound(reading) {
     audio.current = track;
     track.onplay = () => setPlaying(true); track.onpause = () => setPlaying(false);
     track.onerror = () => { intent.current = false; setError(true); setPlaying(false); };
-    const visibility = () => { if (document.hidden) { track.pause(); context.current?.suspend(); } else if (intent.current) safePlay(); };
+    const visibility = () => { if (document.hidden) { track.pause(); context.current?.suspend(); } else if (intent.current && !suspendedRef.current) safePlay(); };
     document.addEventListener('visibilitychange', visibility);
     return () => { track.onplay = track.onpause = track.onerror = null; track.pause(); track.removeAttribute('src'); track.load(); audio.current = null; context.current?.close(); context.current = null; document.removeEventListener('visibilitychange', visibility); };
   }, []);
+  useEffect(() => {
+    if (suspended) { audio.current?.pause(); context.current?.suspend(); }
+    else if (intent.current) safePlay();
+  }, [suspended]);
   useEffect(() => { if (audio.current) { audio.current.muted = muted; audio.current.volume = volume * (reading ? .4 : 1); } }, [muted, volume, reading]);
   const start = () => { intent.current = true; setMuted(false); if (audio.current) { audio.current.muted = false; audio.current.volume = volume * (reading ? .4 : 1); } safePlay(); };
   const toggle = () => { if (playing || intent.current) { intent.current = false; audio.current?.pause(); } else start(); };
   const toggleMute = () => { const next = !muted; setMuted(next); if (audio.current) audio.current.muted = next; if (next) context.current?.suspend(); };
   const chime = (kind = 'open') => {
-    if (muted || !effects || document.hidden) return;
+    if (muted || !effects || document.hidden || suspendedRef.current) return;
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     if (!AudioContext) return;
     try {

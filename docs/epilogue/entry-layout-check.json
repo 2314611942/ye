@@ -1,0 +1,212 @@
+[
+  {
+    "mode": "china",
+    "width": 1920,
+    "height": 1080,
+    "rect": {
+      "x": 1636.359375,
+      "y": 864,
+      "width": 199.640625,
+      "height": 68
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "eurasia",
+    "width": 1920,
+    "height": 1080,
+    "rect": {
+      "x": 1636.359375,
+      "y": 864,
+      "width": 199.640625,
+      "height": 68
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "china",
+    "width": 1440,
+    "height": 900,
+    "rect": {
+      "x": 1156.359375,
+      "y": 684,
+      "width": 199.640625,
+      "height": 68
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "eurasia",
+    "width": 1440,
+    "height": 900,
+    "rect": {
+      "x": 1156.359375,
+      "y": 684,
+      "width": 199.640625,
+      "height": 68
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "china",
+    "width": 1024,
+    "height": 768,
+    "rect": {
+      "x": 740.359375,
+      "y": 568.484375,
+      "width": 199.640625,
+      "height": 68
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "eurasia",
+    "width": 1024,
+    "height": 768,
+    "rect": {
+      "x": 740.359375,
+      "y": 568.484375,
+      "width": 199.640625,
+      "height": 68
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "china",
+    "width": 768,
+    "height": 1024,
+    "rect": {
+      "x": 484.359375,
+      "y": 808,
+      "width": 199.640625,
+      "height": 68
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "eurasia",
+    "width": 768,
+    "height": 1024,
+    "rect": {
+      "x": 484.359375,
+      "y": 808,
+      "width": 199.640625,
+      "height": 68
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "china",
+    "width": 390,
+    "height": 844,
+    "rect": {
+      "x": 251.515625,
+      "y": 648,
+      "width": 124.484375,
+      "height": 56
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "eurasia",
+    "width": 390,
+    "height": 844,
+    "rect": {
+      "x": 251.515625,
+      "y": 648,
+      "width": 124.484375,
+      "height": 56
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "china",
+    "width": 320,
+    "height": 740,
+    "rect": {
+      "x": 181.515625,
+      "y": 544,
+      "width": 124.484375,
+      "height": 56
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "eurasia",
+    "width": 320,
+    "height": 740,
+    "rect": {
+      "x": 181.515625,
+      "y": 544,
+      "width": 124.484375,
+      "height": 56
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "china",
+    "width": 844,
+    "height": 390,
+    "rect": {
+      "x": 577.3125,
+      "y": 234,
+      "width": 182.6875,
+      "height": 56
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  },
+  {
+    "mode": "eurasia",
+    "width": 844,
+    "height": 390,
+    "rect": {
+      "x": 24,
+      "y": 234,
+      "width": 182.6875,
+      "height": 56
+    },
+    "overlap": [],
+    "clickable": true,
+    "outsideHeader": true,
+    "inViewport": true
+  }
+]

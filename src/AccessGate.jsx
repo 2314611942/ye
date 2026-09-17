@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Eye, EyeOff, LockKeyhole, Star } from 'lucide-react';
 import { RedRibbons, YananSkyline } from './RedHeritage';
-import UniversityEmblem from './UniversityEmblem';
+import RedStar from './RedStar';
 import './access-gate.css';
 
 // A browser-side entry gate, not server authentication. Never store the password.
@@ -62,6 +62,6 @@ export default function AccessGate({ children }) {
         </form>
       </section>
     </div>
-    <footer className="access-footer"><span>铭记历史 · 薪火相传</span><UniversityEmblem/></footer>
+    <footer className="access-footer"><span>铭记历史 · 薪火相传</span><RedStar/></footer>
   </main>;
 }

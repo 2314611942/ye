@@ -1,0 +1,7 @@
+.red-star{display:block;width:56px;height:56px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 2px 7px #e94f2430)}
+.brand .red-star{width:44px;height:44px}
+.brand{align-items:center}
+.cover-footer .red-star,.access-footer .red-star{width:52px;height:52px;margin:10px 0}
+.panel-content .red-star{margin:30px auto 0;width:68px;height:68px}
+@media(max-width:640px){.brand .red-star{width:34px;height:34px}.cover-footer .red-star,.access-footer .red-star{width:44px;height:44px;margin:9px 0}}
+@media(max-width:360px){.brand .red-star{width:31px;height:31px}}

@@ -10,17 +10,19 @@ const decodeImage = async (selector) => {
 };
 await page.goto(origin);
 await page.getByLabel('访问密码', {exact:true}).waitFor();
-await page.locator('.access-footer .university-emblem').evaluate(img=>img.decode());
+await page.locator('.access-footer .red-star').evaluate(img=>img.decode());
 await page.screenshot({path:'docs/preview-access.png'});
 await page.setViewportSize({width:390,height:844});
 await page.screenshot({path:'docs/preview-access-mobile.png'});
 await page.setViewportSize({width:1440,height:900});
 await page.getByLabel('访问密码', {exact:true}).fill('yanan');
 await page.getByRole('button', {name:'验证并进入',exact:true}).click();
-await decodeImage('.cover-portrait img');
+await decodeImage('.cover-frame.is-current img');
+await decodeImage('.cover-art img');
 await page.screenshot({path:'docs/preview-entrance.png'});
 for (const width of [390,320]) {
   await page.setViewportSize({width,height:width===390?844:740});
+  await decodeImage('.cover-art img');
   await page.screenshot({path:`docs/preview-entrance-${width}.png`});
 }
 await page.setViewportSize({width:1440,height:900});
@@ -39,7 +41,7 @@ await page.getByRole('tab').first().click();
 await page.setViewportSize({width:390,height:844});
 await page.waitForFunction(()=>{const svg=document.querySelector('.atlas-svg'), rect=svg.getBoundingClientRect();return svg.getAttribute('viewBox') === `0 0 ${Math.round(500 * rect.width / rect.height)} 500`;});
 await page.screenshot({path:'docs/preview-mobile.png'});
-const assets = [...Object.values(media).flatMap(m=>[m.src,m.thumb]),'/data/china.json','/data/world.json','/audio/reverie.mp3','/images/identity/nudt-emblem.png'];
+const assets = [...Object.values(media).flatMap(m=>[m.src,m.thumb]),'/data/china.json','/data/world.json','/audio/reverie.mp3','/images/identity/red-star.svg','/images/cover/epic-landscape.webp','/images/cover/epic-landscape-mobile.webp'];
 for (const url of assets) { const response=await page.request.get(origin+url); if(!response.ok()) errors.push(`${url}: ${response.status()}`); }
 console.log(JSON.stringify({origin,mapRatio,checkedAssets:assets.length,errors},null,2));
 await browser.close(); if(errors.length) process.exitCode=1;

@@ -1,7 +1,0 @@
-.university-emblem{display:block;width:56px;height:56px;object-fit:contain;flex-shrink:0;border-radius:50%}
-.brand .university-emblem{width:44px;height:44px}
-.brand{align-items:center}
-.cover-footer .university-emblem,.access-footer .university-emblem{width:52px;height:52px;margin:10px 0}
-.panel-content .university-emblem{margin:30px auto 0;width:68px;height:68px}
-@media(max-width:640px){.brand .university-emblem{width:34px;height:34px}.cover-footer .university-emblem,.access-footer .university-emblem{width:44px;height:44px;margin:9px 0}}
-@media(max-width:360px){.brand .university-emblem{width:31px;height:31px}}

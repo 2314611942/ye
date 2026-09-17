@@ -14,8 +14,8 @@ test('密码验证先于展厅挂载，错误密码不能进入，正确密码�
   await expect(password(page)).toBeFocused();
   await expect(page.locator('.exhibit')).toHaveCount(0);
   await expect(page.locator('.epic-entrance')).toHaveCount(0);
-  await expect(page.locator('.access-footer .university-emblem')).toBeVisible();
-  await page.locator('.access-footer .university-emblem').evaluate(image => image.decode());
+  await expect(page.locator('.access-footer .red-star')).toBeVisible();
+  await page.locator('.access-footer .red-star').evaluate(image => image.decode());
   await page.getByRole('button', {name:'验证并进入'}).click();
   await expect(page.getByRole('alert')).toHaveText('请输入访问密码。');
   await password(page).fill('Yanan'); await password(page).press('Enter');
